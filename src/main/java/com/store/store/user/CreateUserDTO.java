@@ -12,19 +12,16 @@ import lombok.NoArgsConstructor;
 public class CreateUserDTO {
     @NotNull
     @NotBlank
-    @Min(10)
-    @Max(255)
+    @Size(min = 10)
+    @Size(max = 255)
     public String password;
 
     @Email
     @NotNull
     @NotBlank
-    @Min(3)
-    @Max(255)
+    @Size(min = 3)
+    @Size(max = 255)
     public String email;
 
-    @NotNull
-    @NotBlank
-    @Pattern(regexp="^(ADMIN|OPERATOR)$",message="Invalid role")
     public Role role;
 }
