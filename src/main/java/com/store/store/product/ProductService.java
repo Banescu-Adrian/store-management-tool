@@ -108,6 +108,24 @@ public class ProductService {
         }
     }
 
+    public void deleteProduct(Long productId) throws Exception {
+        Optional<Product> optionalProduct = productRepository.findById(productId);
+
+        if (optionalProduct.isEmpty()) {
+            throw new EntityNotFoundException();
+        }
+
+        try {
+            Product product = optionalProduct.get();
+
+            productRepository.delete(product);
+        } catch (Exception exception) {
+            logger.error("Error on deleteProduct", exception);
+
+            throw new Exception();
+        }
+    }
+
     private static String toSlug(String input) {
         if (input == null) {
             throw new IllegalArgumentException("Input cannot be null");
