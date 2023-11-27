@@ -5,13 +5,13 @@ import com.store.store.product.dtos.UpdateProductDTO;
 import com.store.store.product.exceptions.ProductAlreadyExistsException;
 import com.store.store.user.User;
 import com.store.store.user.UserController;
-import com.store.store.user.exceptions.UserAlreadyExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class ProductService {
     /**
      * No latin pattern.
      */
-    private static final Pattern NONLATIN = Pattern.compile("[^\\w-]");
+    private static final Pattern NON_LATIN = Pattern.compile("[^\\w-]");
     /**
      * Whitespace pattern.
      */
@@ -39,11 +39,11 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> getProducts() {
-
+    public List<Product> getProducts(int page, int size) {
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.by("id").descending());
         List<Product> products = new ArrayList<Product>();
 
-        productRepository.findAll().forEach(products::add);
+        productRepository.findAll(pageRequest).forEach(products::add);
 
         return products;
     }
@@ -133,7 +133,7 @@ public class ProductService {
 
         String nowhitespace = WHITESPACE.matcher(input).replaceAll("-");
         String normalized = Normalizer.normalize(nowhitespace, Form.NFD);
-        String slug = NONLATIN.matcher(normalized).replaceAll("");
+        String slug = NON_LATIN.matcher(normalized).replaceAll("");
         return slug.toLowerCase(Locale.ENGLISH);
     }
 }

@@ -38,8 +38,11 @@ public class ProductController {
     }
 
     @GetMapping()
-    public List<Product> getProducts() {
-        return productService.getProducts();
+    public List<Product> getProducts(
+        @RequestParam int page,
+        @RequestParam int size
+    ) {
+        return productService.getProducts(page, size);
     }
 
     @GetMapping("/{productId}")
