@@ -2,8 +2,8 @@ package com.store.store.security.config;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.store.store.security.services.JWTService;
-import com.store.store.user.User;
-import com.store.store.user.UserRepository;
+import com.store.store.entities.User;
+import com.store.store.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

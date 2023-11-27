@@ -1,4 +1,4 @@
-package com.store.store.authentication;
+package com.store.store.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

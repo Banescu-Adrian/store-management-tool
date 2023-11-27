@@ -1,4 +1,4 @@
-package com.store.store.inventory;
+package com.store.store.enums;
 
 public enum Operation {
     ADD(1),

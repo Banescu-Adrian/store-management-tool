@@ -1,8 +1,7 @@
-package com.store.store.inventory;
+package com.store.store.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.store.store.product.Product;
-import com.store.store.user.User;
+import com.store.store.enums.Operation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

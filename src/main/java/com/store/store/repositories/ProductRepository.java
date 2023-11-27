@@ -1,5 +1,6 @@
-package com.store.store.product;
+package com.store.store.repositories;
 
+import com.store.store.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 

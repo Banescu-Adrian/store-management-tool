@@ -1,4 +1,4 @@
-package com.store.store.inventory.dtos;
+package com.store.store.dtos;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

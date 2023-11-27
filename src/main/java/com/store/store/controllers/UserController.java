@@ -1,7 +1,10 @@
-package com.store.store.user;
+package com.store.store.controllers;
 
-import com.store.store.authorization.Role;
-import com.store.store.user.exceptions.UserAlreadyExistsException;
+import com.store.store.dtos.CreateUserDTO;
+import com.store.store.entities.User;
+import com.store.store.enums.Role;
+import com.store.store.services.UserService;
+import com.store.store.exceptions.UserAlreadyExistsException;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

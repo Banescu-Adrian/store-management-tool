@@ -1,8 +1,10 @@
-package com.store.store.inventory;
+package com.store.store.controllers;
 
-import com.store.store.inventory.dtos.InventoryDTO;
-import com.store.store.inventory.exceptions.InventorySubtractException;
-import com.store.store.user.User;
+import com.store.store.entities.Inventory;
+import com.store.store.dtos.InventoryDTO;
+import com.store.store.services.InventoryService;
+import com.store.store.exceptions.InventorySubtractException;
+import com.store.store.entities.User;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

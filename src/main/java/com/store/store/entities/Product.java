@@ -1,12 +1,11 @@
-package com.store.store.product;
+package com.store.store.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.store.store.inventory.Inventory;
-import com.store.store.user.User;
+import com.store.store.entities.Inventory;
+import com.store.store.entities.User;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Set;

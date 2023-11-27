@@ -1,4 +1,4 @@
-package com.store.store.authorization;
+package com.store.store.enums;
 
 public enum Role {
     ADMIN(1),

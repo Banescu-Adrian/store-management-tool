@@ -1,9 +1,10 @@
 package com.store.store.authentication;
 
+import com.store.store.dtos.AuthenticationDTO;
 import com.store.store.security.services.EncryptionService;
 import com.store.store.security.services.JWTService;
-import com.store.store.user.User;
-import com.store.store.user.UserRepository;
+import com.store.store.entities.User;
+import com.store.store.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

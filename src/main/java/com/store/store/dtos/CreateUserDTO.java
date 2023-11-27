@@ -1,6 +1,6 @@
-package com.store.store.user;
+package com.store.store.dtos;
 
-import com.store.store.authorization.Role;
+import com.store.store.enums.Role;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,10 @@
-package com.store.store.user;
+package com.store.store.services;
 
+import com.store.store.dtos.CreateUserDTO;
+import com.store.store.entities.User;
+import com.store.store.repositories.UserRepository;
 import com.store.store.security.services.EncryptionService;
-import com.store.store.user.exceptions.UserAlreadyExistsException;
+import com.store.store.exceptions.UserAlreadyExistsException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

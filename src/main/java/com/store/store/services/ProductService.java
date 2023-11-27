@@ -1,10 +1,12 @@
-package com.store.store.product;
+package com.store.store.services;
 
-import com.store.store.product.dtos.CreateProductDTO;
-import com.store.store.product.dtos.UpdateProductDTO;
-import com.store.store.product.exceptions.ProductAlreadyExistsException;
-import com.store.store.user.User;
-import com.store.store.user.UserController;
+import com.store.store.entities.Product;
+import com.store.store.dtos.CreateProductDTO;
+import com.store.store.dtos.UpdateProductDTO;
+import com.store.store.exceptions.ProductAlreadyExistsException;
+import com.store.store.entities.User;
+import com.store.store.controllers.UserController;
+import com.store.store.repositories.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

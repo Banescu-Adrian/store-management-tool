@@ -1,4 +1,4 @@
-package com.store.store.product.dtos;
+package com.store.store.dtos;
 
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;

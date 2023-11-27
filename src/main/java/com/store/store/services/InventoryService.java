@@ -1,10 +1,13 @@
-package com.store.store.inventory;
+package com.store.store.services;
 
-import com.store.store.inventory.exceptions.InventorySubtractException;
-import com.store.store.product.Product;
-import com.store.store.product.ProductRepository;
-import com.store.store.user.User;
-import com.store.store.user.UserController;
+import com.store.store.entities.Inventory;
+import com.store.store.enums.Operation;
+import com.store.store.exceptions.InventorySubtractException;
+import com.store.store.entities.Product;
+import com.store.store.repositories.ProductRepository;
+import com.store.store.entities.User;
+import com.store.store.controllers.UserController;
+import com.store.store.repositories.InventoryRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

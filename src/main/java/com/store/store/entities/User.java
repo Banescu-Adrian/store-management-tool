@@ -1,8 +1,8 @@
-package com.store.store.user;
+package com.store.store.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.store.store.authorization.Role;
-import com.store.store.inventory.Inventory;
+import com.store.store.enums.Role;
+import com.store.store.entities.Inventory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

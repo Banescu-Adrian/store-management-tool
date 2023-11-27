@@ -1,9 +1,11 @@
-package com.store.store.product;
+package com.store.store.controllers;
 
-import com.store.store.product.dtos.CreateProductDTO;
-import com.store.store.product.dtos.UpdateProductDTO;
-import com.store.store.product.exceptions.ProductAlreadyExistsException;
-import com.store.store.user.User;
+import com.store.store.entities.Product;
+import com.store.store.dtos.CreateProductDTO;
+import com.store.store.dtos.UpdateProductDTO;
+import com.store.store.services.ProductService;
+import com.store.store.exceptions.ProductAlreadyExistsException;
+import com.store.store.entities.User;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

@@ -1,4 +1,4 @@
-package com.store.store.user.exceptions;
+package com.store.store.exceptions;
 
 public class UserAlreadyExistsException extends Exception {
 }
