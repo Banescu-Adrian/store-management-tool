@@ -1,5 +1,7 @@
-package com.store.store.authentication;
+package com.store.store.controllers;
 
+import com.store.store.responses.AuthenticateResponse;
+import com.store.store.services.AuthenticationService;
 import com.store.store.dtos.AuthenticationDTO;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

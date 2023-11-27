@@ -1,4 +1,4 @@
-package com.store.store.authentication;
+package com.store.store.responses;
 
 import lombok.Getter;
 import lombok.Setter;

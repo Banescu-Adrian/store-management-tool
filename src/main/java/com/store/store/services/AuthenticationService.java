@@ -1,4 +1,4 @@
-package com.store.store.authentication;
+package com.store.store.services;
 
 import com.store.store.dtos.AuthenticationDTO;
 import com.store.store.security.services.EncryptionService;
