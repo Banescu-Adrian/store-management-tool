@@ -35,10 +35,12 @@ public class ProductService {
      */
     private static final Pattern WHITESPACE = Pattern.compile("[\\s]");
     private final ProductRepository productRepository;
+    private final PriceService priceService;
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(ProductRepository productRepository, PriceService priceService) {
         this.productRepository = productRepository;
+        this.priceService = priceService;
     }
 
     public List<Product> getProducts(int page, int size) {
@@ -73,7 +75,9 @@ public class ProductService {
 
             product.setName(createProductDTO.getName());
             product.setSlug(slug);
-            product.setPrice(createProductDTO.getPrice());
+            product.setPrice(
+                    priceService.computeTotalPrice(createProductDTO.getPrice())
+            );
 
             product.setCreatedAt(LocalDateTime.now());
             product.setUpdatedAt(LocalDateTime.now());
@@ -97,7 +101,9 @@ public class ProductService {
         try {
             Product product = optionalProduct.get();
 
-            product.setPrice(updateProductDTO.getPrice());
+            product.setPrice(
+                    priceService.computeTotalPrice(updateProductDTO.getPrice())
+            );
 
             product.setUpdatedAt(LocalDateTime.now());
             product.setUser(user);
