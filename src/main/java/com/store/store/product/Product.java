@@ -1,11 +1,13 @@
 package com.store.store.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.store.store.inventory.Inventory;
 import com.store.store.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -31,14 +33,16 @@ public class Product {
     private Double price;
 
     @Column(name = "created_at", nullable = false)
-    private LocalDate createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "updated_at", nullable = false)
-    private LocalDate updatedAt;
+    private LocalDateTime updatedAt;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "product", orphanRemoval = true)
     private Set<Inventory> inventory = new LinkedHashSet<>();
 
+    @JsonIgnore
     @ManyToOne(optional = false)
     @JoinColumn(name = "created_by", nullable = false)
     private User user;
