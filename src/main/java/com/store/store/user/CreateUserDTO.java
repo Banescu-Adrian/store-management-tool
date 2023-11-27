@@ -23,5 +23,5 @@ public class CreateUserDTO {
     @Size(max = 255)
     public String email;
 
-    public Role role;
+    public Role role = Role.OPERATOR;
 }
