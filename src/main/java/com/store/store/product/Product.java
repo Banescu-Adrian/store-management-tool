@@ -3,10 +3,7 @@ package com.store.store.product;
 import com.store.store.inventory.Inventory;
 import com.store.store.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;

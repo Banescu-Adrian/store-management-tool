@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.*;
 @SecurityRequirement(name = "Authorization")
 @Tag(name = "Users")
 @RestController()
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
     Logger logger = LoggerFactory.getLogger(UserController.class);
